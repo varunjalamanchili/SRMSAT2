@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRMSAT Club - SRM Institute of Science and Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/000000/FFFFFF?text=SRMSAT+Satellite') no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed w-full z-10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">SRMSAT</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About Us</a>
+                <a href="#team" class="hover:text-cyan-400 transition-colors">Our Team</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 hover:text-cyan-400 transition-colors">About Us</a>
+            <a href="#team" class="block py-2 hover:text-cyan-400 transition-colors">Our Team</a>
+            <a href="#contact" class="block py-2 hover:text-cyan-400 transition-colors">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="pt-16">
+        <section class="hero-section h-[60vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Pioneering Nanosatellite Technology</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Designing, building, and operating satellites to push the boundaries of space exploration and research.</p>
+                <a href="#about" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">Learn More</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">About SRMSAT</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/1a202c/FFFFFF?text=Team+Working" alt="SRMSAT Team" class="rounded-lg shadow-2xl">
+                    </div>
+                    <div class="md:w-1/2">
+                        <p class="mb-4">SRMSAT is a student-run satellite team at SRM Institute of Science and Technology. Our primary mission is to foster interest in space technology and provide a platform for students to gain hands-on experience in the design, fabrication, and operation of nanosatellites.</p>
+                        <p class="mb-4">Our first satellite, SRMSAT-1, was successfully launched in 2011, and we are continuously working on new projects to contribute to the scientific community. We focus on various domains including electronics, computer science, mechanical engineering, and management.</p>
+                        <p>Join us on our journey to explore the cosmos and innovate for the future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Meet the Team</h2>
+                <p class="text-center text-gray-400 mb-12">The dedicated individuals leading our mission.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team Member Card -->
+                    <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform">
+                        <img src="https://placehold.co/200x200/374151/FFFFFF?text=Photo" alt="Team Lead" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-500">
+                        <h3 class="text-xl font-bold mb-1">Team Lead Bhumi
+                    
+                        </h3>
+                        <p class="text-cyan-400">Overall Team Lead</p>
+                    </div>
+                    <!-- Team Member Card -->
+                    <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform">
+                        <img src="https://placehold.co/200x200/374151/FFFFFF?text=Photo" alt="Technical Lead" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-500">
+                        <h3 class="text-xl font-bold mb-1">Team Lead Name</h3>
+                        <p class="text-cyan-400">Technical Lead</p>
+                    </div>
+                    <!-- Team Member Card -->
+                    <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform">
+                        <img src="https://placehold.co/200x200/374151/FFFFFF?text=Photo" alt="Management Lead" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-500">
+                        <h3 class="text-xl font-bold mb-1">Team Lead Name</h3>
+                        <p class="text-cyan-400">Management Lead</p>
+                    </div>
+                    <!-- Team Member Card -->
+                    <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform">
+                        <img src="https://placehold.co/200x200/374151/FFFFFF?text=Photo" alt="Subsystem Lead" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-500">
+                        <h3 class="text-xl font-bold mb-1">Team Lead Name</h3>
+                        <p class="text-cyan-400">Communications Lead</p>
+                    </div>
+                     <!-- Add more team members as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                 <p class="text-gray-400 mb-8">Have questions or want to collaborate? Reach out to us.</p>
+                 <a href="mailto:contact@srmsat.com" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">contact@srmsat.com</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 SRMSAT Club. All Rights Reserved.</p>
+            <p>SRM Institute of Science and Technology</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
