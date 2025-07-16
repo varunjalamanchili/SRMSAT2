@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Team SRMSAT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .page-header {
+            /* Updated background image */
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('srm_campus.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .section-gradient {
+            background: radial-gradient(ellipse at center, rgba(29, 78, 216, 0.05), transparent 70%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg border-b border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">TEAM SRMSAT</a>
+                </div>
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="about.html" class="text-white font-semibold">About</a>
+                    <a href="mission.html" class="text-slate-300 hover:text-white transition-colors duration-300">Mission</a>
+                    <a href="team.html" class="text-slate-300 hover:text-white transition-colors duration-300">Team</a>
+                    <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors duration-300">Gallery</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-white transition-colors duration-300">Contact Us / Work With Us</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-lg">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800">About</a>
+                <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Mission</a>
+                <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact Us / Work With Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white">About Team SRMSAT</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300">From a pioneering university project to a legacy of space innovation.</p>
+            </div>
+        </section>
+
+        <!-- SRMSAT-1 Legacy Section -->
+        <section id="legacy" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-white">The SRMSAT-1 Story</h2>
+                    <p class="mt-2 max-w-3xl mx-auto text-slate-400">SRMSAT is a pioneering student-built microsatellite developed by the SRM Institute of Science and Technology, in collaboration with ISRO. Launched on October 12, 2011, aboard the PSLV-C18 mission, it marked a significant milestone in India's private university space initiatives.</p>
+                </div>
+
+                <div class="mt-12 grid md:grid-cols-2 gap-12 items-center">
+                    <div class="pr-0 md:pr-6">
+                        <h3 class="text-xl font-semibold text-white mb-4">Technical Specifications</h3>
+                        <p class="text-slate-400 mb-4">The satellite is a cuboid made out of Al-6061 alloy, with a launch size of 286mm x 286mm x 294mm and a mass of 10.9 kg. The structure was designed as a robust satellite bus, capable of bearing launch loads of ±11g (longitudinal) and ±6g (lateral), making it adaptable for future missions.</p>
+                        
+                        <h3 class="text-xl font-semibold text-white mt-6 mb-4">Mission Highlights</h3>
+                        <ul class="space-y-3 text-slate-400">
+                            <li class="flex items-start"><i data-lucide="rocket" class="w-5 h-5 mr-3 text-blue-400 mt-1"></i><span><strong>Purpose:</strong> Demonstration of LEO satellite technology and atmospheric data collection (GHG monitoring).</span></li>
+                            <li class="flex items-start"><i data-lucide="cpu" class="w-5 h-5 mr-3 text-blue-400 mt-1"></i><span><strong>Payload:</strong> A GHG monitoring sensor to measure levels of water vapor and carbon dioxide.</span></li>
+                            <li class="flex items-start"><i data-lucide="globe-2" class="w-5 h-5 mr-3 text-blue-400 mt-1"></i><span><strong>Orbit:</strong> Sun-synchronous polar orbit at ~720 km altitude.</span></li>
+                            <li class="flex items-start"><i data-lucide="ship" class="w-5 h-5 mr-3 text-blue-400 mt-1"></i><span><strong>Launch Vehicle:</strong> PSLV-C18 (ISRO)</span></li>
+                        </ul>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="srmsat_original.jpg" alt="The SRMSAT-1 Satellite" class="rounded-lg shadow-lg col-span-2">
+                        <img src="srmsat_composition.jpg" alt="SRMSAT-1 Composition Diagram" class="rounded-lg shadow-lg">
+                        <img src="pslv.jpg" alt="PSLV C18 Launch Vehicle" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The New Team Section -->
+        <section id="new-team" class="py-20 bg-black/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-white">The New Team: Driven by Curiosity, Built on Legacy</h2>
+                    <p class="mt-2 max-w-3xl mx-auto text-slate-400">From launching India's first student-built satellite from a private university to now pushing the limits of what student-led missions can achieve—SRMSAT is back with a bold new vision.</p>
+                </div>
+                <div class="mt-12 max-w-4xl mx-auto">
+                    <p class="text-slate-300 text-lg mb-6">A new generation of engineers, scientists, and space enthusiasts from SRMIST is now leading the charge. The SRMSAT 2.0 team is a multidisciplinary collective of undergraduate and postgraduate students from departments including Aerospace, Mechatronics, ECE, and CSE.</p>
+                    <p class="text-slate-300 text-lg mb-8">Under expert mentorship and industry collaboration, the team is focused on developing technologies that aim not just for orbit—but for relevance in solving Earth-based challenges.</p>
+                    
+                    <h3 class="text-xl font-semibold text-white text-center mb-6">Our Core Focus Areas</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-slate-800/50 p-4 rounded-lg">Systems Engineering</div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">Payload Innovation</div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">Embedded Systems</div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">Onboard Processing</div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">Ground Station Design</div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">Sustainable Space Tech</div>
+                    </div>
+                </div>
+            </div>
+        </section
+        
+        <!-- University Logo Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <img src="srm_logo.png" alt="SRM Institute of Science and Technology Logo" class="mx-auto h-24">
+                <p class="mt-4 text-slate-500 text-sm">An official student club of SRM Institute of Science and Technology.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="md:flex md:justify-between md:items-center">
+                <div class="flex justify-center space-x-6 md:order-2">
+                    <a href="https://pr.linkedin.com/company/team-srmsat-space-systems-laboratory" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.instagram.com/srmsatofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="github"></i></a>
+                </div>
+                <div class="mt-8 md:mt-0 md:order-1">
+                    <p class="text-center text-base text-slate-400">
+                        &copy; 2025 Team SRMSAT. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

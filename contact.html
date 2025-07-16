@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Team SRMSAT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .page-header {
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('srm_campus.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .section-gradient {
+            background: radial-gradient(ellipse at center, rgba(29, 78, 216, 0.05), transparent 70%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg border-b border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">TEAM SRMSAT</a>
+                </div>
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="about.html" class="text-slate-300 hover:text-white transition-colors duration-300">About</a>
+                    <a href="mission.html" class="text-slate-300 hover:text-white transition-colors duration-300">Mission</a>
+                    <a href="team.html" class="text-slate-300 hover:text-white transition-colors duration-300">Team</a>
+                    <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors duration-300">Gallery</a>
+                    <a href="contact.html" class="text-white font-semibold">Contact Us / Work With Us</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-lg">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Mission</a>
+                <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800">Contact Us / Work With Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white">Get In Touch</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300">We'd love to hear from you. Whether you're a student, researcher, or potential sponsor, let's connect.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form and Info Section -->
+        <section id="contact-form" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-16 items-start">
+                    <!-- Left Column: Contact Buttons -->
+                    <div class="bg-slate-900/50 p-8 rounded-lg border border-slate-800">
+                        <h2 class="text-2xl font-bold text-white mb-6">Choose How to Reach Us</h2>
+                        <div class="space-y-6">
+                           <a href="mailto:srmsatofficial@gmail.com?subject=Inquiry%20from%20Website" class="w-full flex items-center justify-center bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                               <i data-lucide="mail" class="mr-3"></i>
+                               <span>Send us an Email</span>
+                           </a>
+                           <a href="https://www.instagram.com/srmsatofficial" target="_blank" class="w-full flex items-center justify-center bg-pink-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-pink-700 transition-all duration-300">
+                               <i data-lucide="instagram" class="mr-3"></i>
+                               <span>Message on Instagram</span>
+                           </a>
+                           <a href="https://pr.linkedin.com/company/team-srmsat-space-systems-laboratory" target="_blank" class="w-full flex items-center justify-center bg-sky-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-sky-700 transition-all duration-300">
+                               <i data-lucide="linkedin" class="mr-3"></i>
+                               <span>Connect on LinkedIn</span>
+                           </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Contact Info & Work With Us -->
+                    <div class="pr-0 md:pr-8 text-center md:text-left">
+                        <h2 class="text-2xl font-bold text-white mb-6">Contact Information</h2>
+                        <div class="space-y-4 text-slate-300 inline-block text-left">
+                            <p class="flex items-start">
+                                <i data-lucide="map-pin" class="w-5 h-5 mr-4 mt-1 text-blue-400"></i>
+                                <span>University Building,<br>SRM Institute of Science and Technology,<br>Kattankulathur, Chengalpattu District, Tamil Nadu, India.</span>
+                            </p>
+                            <p class="flex items-start">
+                                <i data-lucide="mail" class="w-5 h-5 mr-4 mt-1 text-blue-400"></i>
+                                <a href="mailto:srmsatofficial@gmail.com" class="hover:text-blue-400">srmsatofficial@gmail.com</a>
+                            </p>
+                        </div>
+
+                        <hr class="my-10 border-slate-800">
+
+                        <img src="new logo with text.png" alt="Team SRMSAT Logo" class="mx-auto h-36 mb-6">
+                        <h2 class="text-2xl font-bold text-white mb-6">Work With Us</h2>
+                        <p class="text-slate-400 mb-4 text-left">
+                            Are you a passionate SRMIST student interested in space technology? We are always looking for dedicated individuals to join our multidisciplinary team.
+                        </p>
+                        <p class="text-slate-300 mb-6 text-left">
+                            Recruitment drives are held periodically. Keep an eye on our social media channels for announcements about openings in various subsystems.
+                        </p>
+                        <a href="https://www.instagram.com/srmsatofficial" target="_blank" class="inline-block bg-slate-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-600 transition-all duration-300">
+                            Follow Our Socials for Updates
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- University Logo Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <img src="srm_logo.png" alt="SRM Institute of Science and Technology Logo" class="mx-auto h-24">
+                <p class="mt-4 text-slate-500 text-sm">An official student club of SRM Institute of Science and Technology.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="md:flex md:justify-between md:items-center">
+                <div class="flex justify-center space-x-6 md:order-2">
+                    <a href="https://pr.linkedin.com/company/team-srmsat-space-systems-laboratory" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.instagram.com/srmsatofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="github"></i></a>
+                </div>
+                <div class="mt-8 md:mt-0 md:order-1">
+                    <p class="text-center text-base text-slate-400">
+                        &copy; 2025 Team SRMSAT. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
