@@ -3,130 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRMSAT Club - SRM Institute of Science and Technology</title>
+    <title>SRMSAT-2 | SRM Student Satellite Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
         }
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/000000/FFFFFF?text=SRMSAT+Satellite') no-repeat center center/cover;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+        }
+        .video-background iframe {
+            width: 100vw;
+            height: 56.25vw; /* 16:9 aspect ratio */
+            min-height: 100vh;
+            min-width: 177.77vh; /* 16:9 aspect ratio */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+        .section-gradient {
+            background: radial-gradient(ellipse at center, rgba(29, 78, 216, 0.05), transparent 70%);
+        }
+        .card-border-gradient {
+            border: 1px solid;
+            border-image-slice: 1;
+            border-image-source: linear-gradient(to right bottom, #1e40af, #3b82f6);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="antialiased">
 
     <!-- Header -->
-    <header class="bg-gray-900/80 backdrop-blur-sm fixed w-full z-10">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white">SRMSAT</a>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#about" class="hover:text-cyan-400 transition-colors">About Us</a>
-                <a href="#team" class="hover:text-cyan-400 transition-colors">Our Team</a>
-                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">SRMSAT-2</a>
+                </div>
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="index.html" class="text-white font-semibold">Home</a>
+                    <a href="about.html" class="text-slate-300 hover:text-white transition-colors duration-300">About</a>
+                    <a href="mission.html" class="text-slate-300 hover:text-white transition-colors duration-300">Mission</a>
+                    <a href="team.html" class="text-slate-300 hover:text-white transition-colors duration-300">Team</a>
+                    <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors duration-300">Gallery</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-white transition-colors duration-300">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
+        </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 hover:text-cyan-400 transition-colors">About Us</a>
-            <a href="#team" class="block py-2 hover:text-cyan-400 transition-colors">Our Team</a>
-            <a href="#contact" class="block py-2 hover:text-cyan-400 transition-colors">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-lg">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Mission</a>
+                <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <main class="pt-16">
-        <section class="hero-section h-[60vh] flex items-center justify-center text-center">
-            <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Pioneering Nanosatellite Technology</h1>
-                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Designing, building, and operating satellites to push the boundaries of space exploration and research.</p>
-                <a href="#about" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">Learn More</a>
+    <main>
+        <!-- Hero Section with Video Background -->
+        <section class="hero-section">
+            <div class="video-background">
+                <iframe 
+                    src="https://www.youtube.com/embed/fO9e9jnhYK8?autoplay=1&mute=1&loop=1&playlist=fO9e9jnhYK8&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+                    title="Earth from ISS" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media">
+                </iframe>
+            </div>
+            <div class="video-overlay"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">Pioneering Nanosatellite Technology</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-slate-200 mb-8 drop-shadow-md">
+                    Building on the legacy of SRMSAT, we are a team of passionate students and faculty at SRMIST developing the next generation of satellite technology.
+                </p>
+                <a href="about.html" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-xl">
+                    Discover Our Mission
+                </a>
             </div>
         </section>
 
-        <!-- About Us Section -->
-        <section id="about" class="py-20 bg-gray-800">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">About SRMSAT</h2>
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="https://placehold.co/600x400/1a202c/FFFFFF?text=Team+Working" alt="SRMSAT Team" class="rounded-lg shadow-2xl">
+        <!-- About Us Section Snippet -->
+        <section id="about-snippet" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="pr-0 md:pr-12">
+                        <h2 class="text-3xl font-bold text-white mb-4">About the SRMSAT-2 Project</h2>
+                        <p class="text-slate-400 mb-4">
+                            SRMSAT-2 is the ambitious successor to the original SRMSAT, which was successfully launched in 2011. This project is driven by the students and faculty of the SRM Institute of Science and Technology, aiming to push the boundaries of space research and nanosatellite capabilities.
+                        </p>
+                        <p class="text-slate-400 mb-6">
+                            Our vision is to foster a culture of innovation and provide a platform for students to gain hands-on experience in space technology, from design and development to launch and operations.
+                        </p>
+                        <a href="about.html" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                            Learn More About Us
+                        </a>
                     </div>
-                    <div class="md:w-1/2">
-                        <p class="mb-4">SRMSAT is a student-run satellite team at SRM Institute of Science and Technology. Our primary mission is to foster interest in space technology and provide a platform for students to gain hands-on experience in the design, fabrication, and operation of nanosatellites.</p>
-                        <p class="mb-4">Our first satellite, SRMSAT-1, was successfully launched in 2011, and we are continuously working on new projects to contribute to the scientific community. We focus on various domains including electronics, computer science, mechanical engineering, and management.</p>
-                        <p>Join us on our journey to explore the cosmos and innovate for the future.</p>
+                    <div>
+                        <img src="https://placehold.co/600x400/1e293b/ffffff?text=Satellite+Blueprint" alt="Satellite Blueprint" class="rounded-lg shadow-2xl">
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Team Section -->
-        <section id="team" class="py-20 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-12">Meet the Team</h2>
-                <p class="text-center text-gray-400 mb-12">The dedicated individuals leading our mission.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Team Member Card -->
-                    <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform">
-                        <img src="https://placehold.co/200x200/374151/FFFFFF?text=Photo" alt="Team Lead" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-500">
-                        <h3 class="text-xl font-bold mb-1">Team Lead 
-                    
-                        </h3>
-                        <p class="text-cyan-400">Overall Team Lead</p>
+        
+        <!-- Mission Objectives Snippet -->
+        <section id="mission-snippet" class="py-20 bg-black/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Our Mission Objectives</h2>
+                    <p class="max-w-2xl mx-auto text-slate-400 mt-2">Key goals we aim to achieve with the SRMSAT-2 satellite.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Mission Card 1 -->
+                    <div class="bg-slate-900/50 p-6 rounded-lg card-border-gradient">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-600/20 mb-4">
+                            <i data-lucide="thermometer-sun" class="text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Climate Monitoring</h3>
+                        <p class="text-slate-400">Carry an advanced spectrometer to monitor greenhouse gases.</p>
                     </div>
-                    <!-- Team Member Card -->
-                    <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform">
-                        <img src="https://placehold.co/200x200/374151/FFFFFF?text=Photo" alt="Technical Lead" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-500">
-                        <h3 class="text-xl font-bold mb-1">Team Lead Name</h3>
-                        <p class="text-cyan-400">Technical Lead</p>
+                    <!-- Mission Card 2 -->
+                    <div class="bg-slate-900/50 p-6 rounded-lg card-border-gradient">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-600/20 mb-4">
+                            <i data-lucide="satellite-dish" class="text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Technology Demo</h3>
+                        <p class="text-slate-400">Test and validate new in-house developed subsystems.</p>
                     </div>
-                    <!-- Team Member Card -->
-                    <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform">
-                        <img src="https://placehold.co/200x200/374151/FFFFFF?text=Photo" alt="Management Lead" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-500">
-                        <h3 class="text-xl font-bold mb-1">Team Lead Name</h3>
-                        <p class="text-cyan-400">Management Lead</p>
+                    <!-- Mission Card 3 -->
+                    <div class="bg-slate-900/50 p-6 rounded-lg card-border-gradient">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-600/20 mb-4">
+                            <i data-lucide="graduation-cap" class="text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Student Training</h3>
+                        <p class="text-slate-400">Provide unparalleled educational experience for students.</p>
                     </div>
-                    <!-- Team Member Card -->
-                    <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transform hover:-translate-y-2 transition-transform">
-                        <img src="https://placehold.co/200x200/374151/FFFFFF?text=Photo" alt="Subsystem Lead" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-cyan-500">
-                        <h3 class="text-xl font-bold mb-1">Team Lead Name</h3>
-                        <p class="text-cyan-400">Communications Lead</p>
-                    </div>
-                     <!-- Add more team members as needed -->
+                </div>
+                 <div class="text-center mt-12">
+                     <a href="mission.html" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                        Explore Mission Details
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-800">
-            <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
-                 <p class="text-gray-400 mb-8">Have questions or want to collaborate? Reach out to us.</p>
-                 <a href="mailto:contact@srmsat.com" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">contact@srmsat.com</a>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-6">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <p>&copy; 2024 SRMSAT Club. All Rights Reserved.</p>
-            <p>SRM Institute of Science and Technology</p>
+    <footer class="bg-black/50 border-t border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="md:flex md:justify-between md:items-center">
+                <div class="flex justify-center space-x-6 md:order-2">
+                    <a href="#" class="text-slate-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white"><i data-lucide="linkedin"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white"><i data-lucide="github"></i></a>
+                </div>
+                <div class="mt-8 md:mt-0 md:order-1">
+                    <p class="text-center text-base text-slate-400">
+                        &copy; 2024 SRMSAT-2 Project. All rights reserved.
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Change header background on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/30', 'backdrop-blur-lg');
+            } else {
+                header.classList.remove('bg-black/30', 'backdrop-blur-lg');
+            }
         });
     </script>
 
