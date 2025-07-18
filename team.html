@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Team | Team SRMSAT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .page-header {
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('https://placehold.co/1920x1080/0a0a0a/e2e8f0?text=Team+SRMSAT') no-repeat center center;
+            background-size: cover;
+        }
+        .section-gradient {
+            background: radial-gradient(ellipse at center, rgba(29, 78, 216, 0.05), transparent 70%);
+        }
+        .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid transparent;
+            background-color: #111827; /* Slightly different from bg-slate-900/50 for more depth */
+        }
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(29, 78, 216, 0.2);
+            border-color: rgba(29, 78, 216, 0.5);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg border-b border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">TEAM SRMSAT</a>
+                </div>
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="about.html" class="text-slate-300 hover:text-white transition-colors duration-300">About</a>
+                    <a href="mission.html" class="text-slate-300 hover:text-white transition-colors duration-300">Mission</a>
+                    <a href="team.html" class="text-white font-semibold">Team</a>
+                    <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors duration-300">Gallery</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-white transition-colors duration-300">Contact Us / Work With Us</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-lg">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Mission</a>
+                <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800">Team</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact Us / Work With Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white">Meet the Minds Behind the Mission</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300">The driving force of SRMSAT: a dedicated team of students and the experienced faculty who guide them.</p>
+            </div>
+        </section>
+
+        <!-- Student Team Section -->
+        <section id="student-team" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white">The Student Team</h2>
+                    <p class="mt-2 max-w-3xl mx-auto text-slate-400">A multidisciplinary group of passionate innovators, engineers, and future leaders in space technology.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    
+                    <!-- Team Member Card: Bhumi Penkar -->
+                    <div class="team-card rounded-lg p-6 flex flex-col text-center">
+                        <img class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-slate-700 object-cover" src="bhumi.jpg" alt="Bhumi Penkar">
+                        <h3 class="text-xl font-bold text-white">Bhumi Penkar</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Mechanical & Designing Lead</p>
+                        <p class="text-slate-300 text-xs mt-1">Aerospace Engineering | 2nd Year</p>
+                        <p class="text-slate-400 mt-4 text-sm flex-grow">Future space architect in the making-turning big dreams into lightweight structures for the stars. Can be found crafting the satellite's backbone-designing, analyzing, and making sure every gram counts for orbit, as a part of mechanical structures in domain subsystem.</p>
+                        <div class="mt-4 pt-3 border-t border-slate-700/50 text-xs">
+                            <p class="text-slate-400"><strong class="font-semibold">Domain:</strong> Mechanical Structures</p>
+                            <p class="text-slate-500"><strong class="font-semibold">Subdomain:</strong> Structures and Designing</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card: Varun -->
+                    <div class="team-card rounded-lg p-6 flex flex-col text-center">
+                        <img class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-slate-700" src="https://placehold.co/100x100/1e293b/ffffff?text=Varun" alt="Varun">
+                        <h3 class="text-xl font-bold text-white">Varun</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Onboard Computer Systems Co-Lead</p>
+                        <p class="text-slate-300 text-xs mt-1">CSE | 3rd Year</p>
+                        <p class="text-slate-400 mt-4 text-sm flex-grow">A brief bio about the student's passion for space, key skills, and their role in the project.</p>
+                        <div class="mt-4 pt-3 border-t border-slate-700/50 text-xs">
+                            <p class="text-slate-400"><strong class="font-semibold">Domain:</strong> OBC</p>
+                            <p class="text-slate-500"><strong class="font-semibold">Subdomain:</strong> Flight Software</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member Card: Nayan -->
+                    <div class="team-card rounded-lg p-6 flex flex-col text-center">
+                        <img class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-slate-700" src="https://placehold.co/100x100/1e293b/ffffff?text=Nayan" alt="Nayan">
+                        <h3 class="text-xl font-bold text-white">Nayan</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Onboard Computer Systems Co-Lead</p>
+                        <p class="text-slate-300 text-xs mt-1">ECE | 3rd Year</p>
+                        <p class="text-slate-400 mt-4 text-sm flex-grow">A brief bio about the student's passion for space, key skills, and their role in the project.</p>
+                        <div class="mt-4 pt-3 border-t border-slate-700/50 text-xs">
+                            <p class="text-slate-400"><strong class="font-semibold">Domain:</strong> OBC</p>
+                            <p class="text-slate-500"><strong class="font-semibold">Subdomain:</strong> Hardware</p>
+                        </div>
+                    </div>
+
+                    <!-- Team Member Card: Deena -->
+                    <div class="team-card rounded-lg p-6 flex flex-col text-center">
+                        <img class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-slate-700" src="https://placehold.co/100x100/1e293b/ffffff?text=Deena" alt="Deena">
+                        <h3 class="text-xl font-bold text-white">Deena</h3>
+                        <p class="text-blue-400 font-semibold text-sm">ADCS Lead</p>
+                        <p class="text-slate-300 text-xs mt-1">Mechatronics | 4th Year</p>
+                        <p class="text-slate-400 mt-4 text-sm flex-grow">A brief bio about the student's passion for space, key skills, and their role in the project.</p>
+                        <div class="mt-4 pt-3 border-t border-slate-700/50 text-xs">
+                            <p class="text-slate-400"><strong class="font-semibold">Domain:</strong> ADCS</p>
+                            <p class="text-slate-500"><strong class="font-semibold">Subdomain:</strong> Control Systems</p>
+                        </div>
+                    </div>
+
+                    <!-- And so on for the rest of the team... -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty Advisors Section -->
+        <section id="faculty" class="py-20 bg-black/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Faculty Advisors</h2>
+                    <p class="mt-2 max-w-3xl mx-auto text-slate-400">The guiding force providing invaluable expertise, mentorship, and support to the student team.</p>
+                </div>
+                <div class="flex justify-center flex-wrap gap-8">
+                    <!-- Faculty Card -->
+                    <div class="team-card rounded-lg p-6 flex flex-col text-center w-full sm:w-2/5 lg:w-1/4">
+                        <img class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-slate-700" src="https://placehold.co/100x100/1e293b/ffffff?text=Faculty+1" alt="Faculty Advisor 1">
+                        <h3 class="text-xl font-bold text-white">Dr. S. S. S. V. Gopala Raju</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Professor, Mechanical Engg.</p>
+                        <p class="text-slate-400 mt-4 text-sm flex-grow">Expert in structural mechanics and finite element analysis, providing critical oversight on the satellite's physical design and resilience.</p>
+                    </div>
+                    <!-- Faculty Card -->
+                    <div class="team-card rounded-lg p-6 flex flex-col text-center w-full sm:w-2/5 lg:w-1/4">
+                        <img class="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-slate-700" src="https://placehold.co/100x100/1e293b/ffffff?text=Faculty+2" alt="Faculty Advisor 2">
+                        <h3 class="text-xl font-bold text-white">Dr. D. Vijayan</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Asst. Professor, ECE Dept.</p>
+                        <p class="text-slate-400 mt-4 text-sm flex-grow">Specializes in communication systems and embedded electronics, guiding the development of the TTC and OBC subsystems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="md:flex md:justify-between md:items-center">
+                <div class="flex justify-center space-x-6 md:order-2">
+                    <a href="https://pr.linkedin.com/company/team-srmsat-space-systems-laboratory" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.instagram.com/srmsatofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="github"></i></a>
+                </div>
+                <div class="mt-8 md:mt-0 md:order-1">
+                    <p class="text-center text-base text-slate-400">
+                        &copy; 2025 Team SRMSAT. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
