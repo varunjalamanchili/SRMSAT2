@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Team SRMSAT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .page-header {
+            /* Updated to use a local image */
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('gallery/banner.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .section-gradient {
+            background: radial-gradient(ellipse at center, rgba(29, 78, 216, 0.05), transparent 70%);
+        }
+        .gallery-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        /* Modal styles */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-content {
+            transition: transform 0.25s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg border-b border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">TEAM SRMSAT</a>
+                </div>
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="about.html" class="text-slate-300 hover:text-white transition-colors duration-300">About</a>
+                    <a href="mission.html" class="text-slate-300 hover:text-white transition-colors duration-300">Mission</a>
+                    <a href="team.html" class="text-slate-300 hover:text-white transition-colors duration-300">Team</a>
+                    <a href="gallery.html" class="text-white font-semibold">Gallery</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-white transition-colors duration-300">Contact Us / Work With Us</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-lg">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Mission</a>
+                <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact Us / Work With Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white">Gallery</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300">A visual journey through the history, development, and achievements of Team SRMSAT.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery-grid" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Image Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Existing Images -->
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%201.jpg')">
+                        <img src="gallery/gallery 1.jpg" alt="Gallery Image 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/srmsat_original.jpg')">
+                        <img src="gallery/srmsat_original.jpg" alt="SRMSAT Original Satellite" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/srmsat_composition.jpg')">
+                        <img src="gallery/srmsat_composition.jpg" alt="SRMSAT Composition Diagram" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%207.jpg')">
+                        <img src="gallery/gallery 7.jpg" alt="Gallery Image 7" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%208.jpg')">
+                        <img src="gallery/gallery 8.jpg" alt="Gallery Image 8" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/galley%209.jpg')">
+                        <img src="gallery/galley 9.jpg" alt="Gallery Image 9" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%2010.jpg')">
+                        <img src="gallery/gallery 10.jpg" alt="Gallery Image 10" class="w-full h-full object-cover">
+                    </div>
+                     <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%2011.jpg')">
+                        <img src="gallery/gallery 11.jpg" alt="Gallery Image 11" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%2012.jpg')">
+                        <img src="gallery/gallery 12.jpg" alt="Gallery Image 12" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery13.jpg')">
+                        <img src="gallery/gallery13.jpg" alt="Gallery Image 13" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Newly Added Images -->
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%202.jpg')">
+                        <img src="gallery/gallery 2.jpg" alt="Gallery Image 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%203.jpg')">
+                        <img src="gallery/gallery 3.jpg" alt="Gallery Image 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%204.jpg')">
+                        <img src="gallery/gallery 4.jpg" alt="Gallery Image 4" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%205.jpg')">
+                        <img src="gallery/gallery 5.jpg" alt="Gallery Image 5" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Video Section -->
+        <section id="videos" class="py-20 bg-black/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Videos</h2>
+                    <p class="mt-2 max-w-3xl mx-auto text-slate-400">Watch key moments from our journey, including the historic launch of SRMSAT-1.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <!-- Video 1 -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl">
+                       <iframe class="w-full h-full" src="https://www.youtube.com/embed/gbTj7E3S_n4?autoplay=1&mute=1&loop=1&playlist=gbTj7E3S_n4" title="SRMSAT-1 Launch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- Video 2 -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl">
+                       <iframe class="w-full h-full" src="https://www.youtube.com/embed/ypWr7Ef19DY?autoplay=1&mute=1&loop=1&playlist=ypWr7Ef19DY" title="SRMSAT Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- Video 3 -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl">
+                       <iframe class="w-full h-full" src="https://www.youtube.com/embed/xKJ3jXhU7qU?autoplay=1&mute=1&loop=1&playlist=xKJ3jXhU7qU" title="SRMSAT Team Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- Video 4 (New Placeholder) -->
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl">
+                       <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_HERE?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID_HERE" title="New SRMSAT Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- University Logo Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <img src="srm_logo.png" alt="SRM Institute of Science and Technology Logo" class="mx-auto h-24">
+                <p class="mt-4 text-slate-500 text-sm">An official student club of SRM Institute of Science and Technology.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="md:flex md:justify-between md:items-center">
+                <div class="flex justify-center space-x-6 md:order-2">
+                    <a href="https://pr.linkedin.com/company/team-srmsat-space-systems-laboratory" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.instagram.com/srmsatofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="github"></i></a>
+                </div>
+                <div class="mt-8 md:mt-0 md:order-1">
+                    <p class="text-center text-base text-slate-400">
+                        &copy; 2025 Team SRMSAT. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4 opacity-0 pointer-events-none">
+        <div class="modal-content bg-slate-900 rounded-lg shadow-2xl overflow-hidden max-w-4xl max-h-full w-full transform scale-95">
+            <img id="modalImage" src="" alt="Full-size gallery image" class="w-full h-auto object-contain">
+        </div>
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-white hover:text-slate-300">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+    </div>
+
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Image Modal Logic
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalContent = modal.querySelector('.modal-content');
+
+        function openModal(imageUrl) {
+            modalImage.src = imageUrl;
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modalContent.classList.remove('scale-95');
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalContent.classList.add('scale-95');
+            setTimeout(() => {
+                 modal.classList.add('pointer-events-none');
+            }, 250);
+        }
+
+        // Close modal on background click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
