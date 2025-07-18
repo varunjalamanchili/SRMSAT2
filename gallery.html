@@ -86,7 +86,7 @@
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Image Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 1.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%201.jpg')">
                         <img src="gallery/gallery%201.jpg" alt="gallery 1.jpg" class="w-full h-full object-cover">
                     </div>
                     <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/srmsat_original.jpg')">
@@ -95,37 +95,37 @@
                     <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/srmsat_composition.jpg')">
                         <img src="gallery/srmsat_composition.jpg" alt="srmsat_composition.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 7.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%207.jpg')">
                         <img src="gallery/gallery%207.jpg" alt="gallery 7.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 8.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%208.jpg')">
                         <img src="gallery/gallery%208.jpg" alt="gallery 8.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/galley 9.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/galley%209.jpg')">
                         <img src="gallery/galley%209.jpg" alt="galley 9.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 10.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%2010.jpg')">
                         <img src="gallery/gallery%2010.jpg" alt="gallery 10.jpg" class="w-full h-full object-cover">
                     </div>
-                     <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 11.jpg')">
+                     <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%2011.jpg')">
                         <img src="gallery/gallery%2011.jpg" alt="gallery 11.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 12.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%2012.jpg')">
                         <img src="gallery/gallery%2012.jpg" alt="gallery 12.jpg" class="w-full h-full object-cover">
                     </div>
                     <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery13.jpg')">
                         <img src="gallery/gallery13.jpg" alt="gallery13.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 2.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%202.jpg')">
                         <img src="gallery/gallery%202.jpg" alt="gallery 2.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 3.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%203.jpg')">
                         <img src="gallery/gallery%203.jpg" alt="gallery 3.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 4.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%204.jpg')">
                         <img src="gallery/gallery%204.jpg" alt="gallery 4.jpg" class="w-full h-full object-cover">
                     </div>
-                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery 5.jpg')">
+                    <div class="gallery-item group cursor-pointer overflow-hidden rounded-lg shadow-lg" onclick="openModal('gallery/gallery%205.jpg')">
                         <img src="gallery/gallery%205.jpg" alt="gallery 5.jpg" class="w-full h-full object-cover">
                     </div>
                 </div>
@@ -212,9 +212,7 @@
         const modalContent = modal.querySelector('.modal-content');
 
         function openModal(imageUrl) {
-            // URL encoding for spaces in filenames
-            const encodedUrl = imageUrl.replace(/ /g, '%20');
-            modalImage.src = encodedUrl;
+            modalImage.src = imageUrl;
             modal.classList.remove('opacity-0', 'pointer-events-none');
             modalContent.classList.remove('scale-95');
         }
