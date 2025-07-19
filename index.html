@@ -68,6 +68,9 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(29, 78, 216, 0.15);
         }
+        .ai-response-container p {
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -84,7 +87,8 @@
                     <a href="mission.html" class="text-slate-300 hover:text-white transition-colors duration-300">Mission</a>
                     <a href="team.html" class="text-slate-300 hover:text-white transition-colors duration-300">Team</a>
                     <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors duration-300">Gallery</a>
-                    <a href="contact.html" class="text-slate-300 hover:text-white transition-colors duration-300">Contact Us / Work With Us</a>
+                    <a href="cubesat.html" class="text-slate-300 hover:text-white transition-colors duration-300">What is a CubeSat?</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-white transition-colors duration-300">Contact Us</a>
                 </nav>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none">
@@ -100,7 +104,8 @@
                 <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Mission</a>
                 <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
                 <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact Us / Work With Us</a>
+                <a href="cubesat.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">What is a CubeSat?</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -224,6 +229,33 @@
             </div>
         </section>
 
+        <!-- Gemini AI Bot Section -->
+        <section id="ai-section" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center">
+                     <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">✨ Ask SRMSAT AI</h2>
+                     <p class="mt-4 text-lg leading-8 text-slate-300">
+                        Have questions about our missions, technology, or space in general? Ask our AI assistant.
+                     </p>
+                </div>
+                <div class="mt-8 max-w-xl mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="text" id="ai-prompt-input" class="w-full px-4 py-3 rounded-md bg-slate-800 text-white border border-slate-700 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="e.g., What was the purpose of SRMSAT-1?">
+                        <button id="ai-ask-button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition-colors duration-300 flex items-center justify-center">
+                            <span id="button-text">Ask AI</span>
+                            <svg id="button-loader" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="ai-response-container" class="mt-6 bg-slate-800/50 p-6 rounded-lg border border-slate-700 text-slate-300 min-h-[100px] ai-response-container">
+                        Your answer will appear here...
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- University Logo Section -->
         <section class="py-16">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -279,19 +311,14 @@
             const teamCards = document.querySelectorAll('#team-members-grid .team-card');
 
             function showMembers(domain) {
-                // Remove active class from all tabs
                 domainTabs.forEach(t => t.classList.remove('active'));
-                // Add active class to the hovered tab
                 const activeTab = document.querySelector(`.domain-tab[data-domain="${domain}"]`);
-                if (activeTab) {
-                    activeTab.classList.add('active');
-                }
+                if (activeTab) activeTab.classList.add('active');
 
-                // Show/hide cards based on domain
                 teamCards.forEach(card => {
                     if (card.dataset.domain === domain) {
                         card.classList.remove('hidden');
-                        card.classList.add('flex'); // Use flex to ensure proper layout
+                        card.classList.add('flex');
                     } else {
                         card.classList.add('hidden');
                         card.classList.remove('flex');
@@ -305,10 +332,72 @@
                     showMembers(domain);
                 });
             });
-
-            // Set initial state (show Mechanical by default)
             showMembers('mechanical');
         });
+
+        // --- Gemini API Integration ---
+        const askButton = document.getElementById('ai-ask-button');
+        const promptInput = document.getElementById('ai-prompt-input');
+        const responseContainer = document.getElementById('ai-response-container');
+        const buttonText = document.getElementById('button-text');
+        const buttonLoader = document.getElementById('button-loader');
+
+        askButton.addEventListener('click', handleAskAI);
+        promptInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleAskAI();
+            }
+        });
+
+        async function handleAskAI() {
+            const userPrompt = promptInput.value.trim();
+            if (!userPrompt) {
+                responseContainer.textContent = 'Please enter a question.';
+                return;
+            }
+
+            buttonText.classList.add('hidden');
+            buttonLoader.classList.remove('hidden');
+            askButton.disabled = true;
+            responseContainer.innerHTML = 'Thinking...';
+
+            try {
+                const fullPrompt = `You are an AI assistant for SRMSAT, a student satellite project from SRM Institute of Science and Technology. Your goal is to answer questions from the public. Key information about SRMSAT: SRMSAT-1 was our first nanosatellite, launched in 2011 to monitor greenhouse gases. The team is composed of undergraduate and postgraduate students. Our mission is to build low-cost satellites for scientific research. Our vision is to become a center of excellence in student-driven space research. Based on this context, please answer the following user question: "${userPrompt}"`;
+
+                let chatHistory = [{ role: "user", parts: [{ text: fullPrompt }] }];
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // API key is handled by the environment
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API request failed with status ${response.status}`);
+                }
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates[0].content && result.candidates[0].content.parts) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    const formattedText = text.split('\n').map(p => `<p>${p}</p>`).join('');
+                    responseContainer.innerHTML = formattedText;
+                } else {
+                    responseContainer.textContent = 'Sorry, I could not generate a response.';
+                }
+
+            } catch (error) {
+                console.error('Error calling Gemini API:', error);
+                responseContainer.textContent = 'Sorry, an error occurred. Please check the console for details.';
+            } finally {
+                buttonText.classList.remove('hidden');
+                buttonLoader.classList.add('hidden');
+                askButton.disabled = false;
+            }
+        }
     </script>
 
 </body>

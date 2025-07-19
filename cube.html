@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is a CubeSat? | Team SRMSAT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .page-header {
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('cube.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .section-gradient {
+            background: radial-gradient(ellipse at center, rgba(29, 78, 216, 0.05), transparent 70%);
+        }
+        .subsystem-button {
+            transition: all 0.3s ease;
+            border: 1px solid #374151;
+        }
+        .subsystem-button.active, .subsystem-button:hover {
+            background-color: #1e40af;
+            border-color: #3b82f6;
+            color: white;
+        }
+        .subsystem-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .subsystem-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg border-b border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">TEAM SRMSAT</a>
+                </div>
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="about.html" class="text-slate-300 hover:text-white transition-colors duration-300">About</a>
+                    <a href="mission.html" class="text-slate-300 hover:text-white transition-colors duration-300">Mission</a>
+                    <a href="team.html" class="text-slate-300 hover:text-white transition-colors duration-300">Team</a>
+                    <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors duration-300">Gallery</a>
+                    <a href="cubesat.html" class="text-white font-semibold">What is a CubeSat?</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-white transition-colors duration-300">Contact Us</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-lg">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Mission</a>
+                <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                <a href="cubesat.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800">What is a CubeSat?</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg">The CubeSat Revolution</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300">Small satellites, big impact. Discover the technology democratizing space.</p>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section id="cubesat-info" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-white">A New Era of Space Exploration</h2>
+                    <p class="mt-4 text-slate-400">
+                        A CubeSat is a class of miniaturized satellite based on a standardized unit of 10x10x10 cm. These "1U" cubes can be stacked to build larger satellites (3U, 6U, 12U) while maintaining a consistent form factor. This brilliant standardization, pioneered by Cal Poly and Stanford University, has shattered the cost and complexity barriers of space access. It has empowered students, researchers, and startups worldwide to send their own experiments into orbit, leading to an explosion of innovation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anatomy of a CubeSat Section -->
+        <section id="anatomy" class="py-20 bg-black/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white">Anatomy of a CubeSat</h2>
+                    <p class="mt-2 max-w-3xl mx-auto text-slate-400">Click on a subsystem to see how our team brings it to life.</p>
+                </div>
+                
+                <div class="lg:grid lg:grid-cols-12 lg:gap-12">
+                    <!-- Subsystem Buttons -->
+                    <div class="lg:col-span-3">
+                        <div class="flex flex-col space-y-3">
+                            <button class="subsystem-button active text-left p-4 rounded-lg" onclick="showSubsystem('structures')">Structures & Thermal</button>
+                            <button class="subsystem-button text-left p-4 rounded-lg" onclick="showSubsystem('avionics')">Avionics (OBC & ADCS)</button>
+                            <button class="subsystem-button text-left p-4 rounded-lg" onclick="showSubsystem('comms')">Communications (TTC)</button>
+                            <button class="subsystem-button text-left p-4 rounded-lg" onclick="showSubsystem('power')">Power System (EPS)</button>
+                            <button class="subsystem-button text-left p-4 rounded-lg" onclick="showSubsystem('payload')">Payload</button>
+                        </div>
+                    </div>
+
+                    <!-- Subsystem Content Display -->
+                    <div class="lg:col-span-9 mt-8 lg:mt-0">
+                        <div id="subsystem-display" class="bg-slate-900/50 rounded-lg p-6 min-h-[300px]">
+                            
+                            <!-- Structures Content -->
+                            <div id="structures" class="subsystem-content active">
+                                <h3 class="text-2xl font-bold text-blue-400 mb-4">Structures & Thermal</h3>
+                                <div>
+                                    <p class="text-slate-300 text-sm mb-4">The satellite's backbone. The structure provides the robust frame—typically made of lightweight aluminum alloys—that houses all components, protecting them from the intense g-forces and vibrations of launch. Our team uses computer-aided design (CAD) and finite element analysis (FEA) to ensure it's strong yet light.</p>
+                                    <p class="text-slate-300 text-sm">The thermal subsystem is equally critical, managing heat through insulation, radiators, and coatings to keep sensitive electronics within their operational temperature range in the extreme vacuum of space.</p>
+                                </div>
+                            </div>
+
+                            <!-- Avionics Content -->
+                            <div id="avionics" class="subsystem-content">
+                                <h3 class="text-2xl font-bold text-blue-400 mb-4">Avionics (OBC & ADCS)</h3>
+                                <div>
+                                    <p class="text-slate-300 text-sm mb-4">The brain and nervous system. The On-Board Computer (OBC) is a radiation-hardened processor that executes flight software, processes data from sensors, and manages all of the satellite's operations. The Attitude Determination and Control System (ADCS) is the navigation system; it uses sensors like magnetometers, sun sensors, and gyros to know its orientation, and actuators like reaction wheels or magnetorquers to point the satellite precisely where needed for communication or payload operation.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Comms Content -->
+                            <div id="comms" class="subsystem-content">
+                                <h3 class="text-2xl font-bold text-blue-400 mb-4">Communications (TTC)</h3>
+                                <div>
+                                    <p class="text-slate-300 text-sm mb-4">The satellite's link to Earth. The Telemetry, Tracking, and Command (TTC) subsystem consists of antennas and radios operating on specific frequency bands (like UHF or S-Band). It transmits health data and scientific measurements (telemetry) to our ground station and receives commands (uplink) from our operators. This vital link allows us to control the satellite and retrieve valuable mission data from hundreds of kilometers away.</p>
+                                </div>
+                            </div>
+
+                            <!-- Power Content -->
+                            <div id="power" class="subsystem-content">
+                                <h3 class="text-2xl font-bold text-blue-400 mb-4">Power System (EPS)</h3>
+                                <div>
+                                    <p class="text-slate-300 text-sm mb-4">The powerhouse. The Electrical Power System (EPS) generates energy using high-efficiency solar panels. This power is stored in rechargeable lithium-ion batteries and managed by a sophisticated Power Conditioning and Distribution Unit (PCDU). The PCDU provides stable, regulated voltage to each subsystem, ensuring the satellite stays operational throughout its orbit, even when in Earth's shadow.</p>
+                                </div>
+                            </div>
+
+                            <!-- Payload Content -->
+                            <div id="payload" class="subsystem-content">
+                                <h3 class="text-2xl font-bold text-blue-400 mb-4">Payload</h3>
+                                <div>
+                                    <p class="text-slate-300 text-sm mb-4">The heart of the mission. The payload is the primary instrument the satellite carries to perform its objective. It's the reason for the flight. For SRMSAT-1, this was an Argus spectrometer to detect greenhouse gases. For future missions, payloads could be anything from high-resolution cameras for Earth observation, to experimental communication devices, or scientific sensors designed to answer specific research questions about our planet and the universe.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- University Logo Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <img src="srm_logo.png" alt="SRM Institute of Science and Technology Logo" class="mx-auto h-24">
+                <p class="mt-4 text-slate-500 text-sm">An official student club of SRM Institute of Science and Technology.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="md:flex md:justify-between md:items-center">
+                <div class="flex justify-center space-x-6 md:order-2">
+                    <a href="https://pr.linkedin.com/company/team-srmsat-space-systems-laboratory" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.instagram.com/srmsatofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="github"></i></a>
+                </div>
+                <div class="mt-8 md:mt-0 md:order-1">
+                    <p class="text-center text-base text-slate-400">
+                        &copy; 2025 Team SRMSAT. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Subsystem interactive logic
+        function showSubsystem(subsystemId) {
+            // Hide all content panels
+            document.querySelectorAll('.subsystem-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            // Deactivate all buttons
+            document.querySelectorAll('.subsystem-button').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Show the selected content panel
+            document.getElementById(subsystemId).classList.add('active');
+            // Activate the selected button
+            document.querySelector(`.subsystem-button[onclick="showSubsystem('${subsystemId}')"]`).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
