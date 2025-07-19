@@ -52,6 +52,22 @@
         .section-gradient {
             background: radial-gradient(ellipse at center, rgba(29, 78, 216, 0.05), transparent 70%);
         }
+        .domain-tab {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .domain-tab.active, .domain-tab:hover {
+            background-color: #1e40af; /* blue-800 */
+            color: #ffffff;
+        }
+        .team-card {
+            background-color: #111827;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+         .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(29, 78, 216, 0.15);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -127,8 +143,13 @@
                         <p class="text-slate-400 mb-6">
                             A testament to its robust design and the team's dedication, SRMSAT-1 has far outlived its planned mission duration. It remains operational in orbit to this day, a continuing source of pride and a powerful foundation for our current project, SRMSAT-2.
                         </p>
-                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
-                           <iframe src="https://www.youtube.com/embed/gbTj7E3S_n4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                               <iframe class="w-full h-full" src="https://www.youtube.com/embed/gbTj7E3S_n4" title="SRMSAT-1 Launch Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                               <iframe class="w-full h-full" src="https://www.youtube.com/embed/ypWr7Ef19DY" title="SRMSAT Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -138,26 +159,66 @@
             </div>
         </section>
         
-        <!-- Team Snippet Section -->
+        <!-- Interactive Team Section -->
         <section id="team-snippet" class="py-20 bg-black/20">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-white">Meet the Team</h2>
-                    <p class="max-w-2xl mx-auto text-slate-400 mt-2">The dedicated student leads driving the SRMSAT-2 project forward.</p>
+                    <p class="max-w-2xl mx-auto text-slate-400 mt-2">Hover over a domain to see the brilliant minds behind it.</p>
                 </div>
-                <div class="max-w-4xl mx-auto text-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-                        <p><strong class="text-blue-400 font-semibold">Mechanical & Designing:</strong> Bhumi</p>
-                        <p><strong class="text-blue-400 font-semibold">Onboard Computer Systems:</strong> Varun, Nayan</p>
-                        <p><strong class="text-blue-400 font-semibold">ADCS:</strong> Deena</p>
-                        <p><strong class="text-blue-400 font-semibold">TTC:</strong> Abhishek</p>
-                        <p><strong class="text-blue-400 font-semibold">Thermals:</strong> Mithul, Abhay</p>
-                        <p><strong class="text-blue-400 font-semibold">Corporate:</strong> Chinmayee</p>
+                
+                <!-- Domain Tabs -->
+                <div class="flex justify-center flex-wrap gap-4 mb-12">
+                    <div class="domain-tab active bg-slate-800 text-slate-300 font-semibold py-2 px-5 rounded-full" data-domain="mechanical">Mechanical</div>
+                    <div class="domain-tab bg-slate-800 text-slate-300 font-semibold py-2 px-5 rounded-full" data-domain="avionics">Avionics</div>
+                    <div class="domain-tab bg-slate-800 text-slate-300 font-semibold py-2 px-5 rounded-full" data-domain="corporate">Corporate & Media</div>
+                </div>
+
+                <!-- Team Member Cards Display -->
+                <div id="team-members-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Cards will be dynamically shown/hidden here -->
+                    
+                    <!-- Mechanical Domain Members -->
+                    <div class="team-card rounded-lg p-6 flex-col text-center" data-domain="mechanical">
+                        <h3 class="text-xl font-bold text-white">Bhumi Penkar</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Mechanical and Designing</p>
+                    </div>
+                    <div class="team-card rounded-lg p-6 flex-col text-center" data-domain="mechanical">
+                        <h3 class="text-xl font-bold text-white">JOSEWIN.F</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Mechanical Structures & Analysis</p>
+                    </div>
+                    <div class="team-card rounded-lg p-6 flex-col text-center" data-domain="mechanical">
+                        <h3 class="text-xl font-bold text-white">Hari Kumar Kollapan</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Mechanical Structures</p>
+                    </div>
+
+                    <!-- Avionics Domain Members -->
+                    <div class="team-card rounded-lg p-6 flex-col text-center hidden" data-domain="avionics">
+                        <h3 class="text-xl font-bold text-white">Varun Jalamanchili</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Onboard Computer Systems</p>
+                    </div>
+                     <div class="team-card rounded-lg p-6 flex-col text-center hidden" data-domain="avionics">
+                        <h3 class="text-xl font-bold text-white">Deenathayalan A</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Avionics & Control Systems</p>
+                    </div>
+                    <div class="team-card rounded-lg p-6 flex-col text-center hidden" data-domain="avionics">
+                        <h3 class="text-xl font-bold text-white">Nayan Raj</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Onboard Computer Systems</p>
+                    </div>
+                     <div class="team-card rounded-lg p-6 flex-col text-center hidden" data-domain="avionics">
+                        <h3 class="text-xl font-bold text-white">Abhishek Samanna</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Communications Lead</p>
+                    </div>
+
+                    <!-- Corporate & Media Domain Members -->
+                    <div class="team-card rounded-lg p-6 flex-col text-center hidden" data-domain="corporate">
+                        <h3 class="text-xl font-bold text-white">Chinmayee</h3>
+                        <p class="text-blue-400 font-semibold text-sm">Research and Media/Corporate</p>
                     </div>
                 </div>
                  <div class="text-center mt-12">
                      <a href="team.html" class="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
-                        More Info on Team Members
+                        See Full Team Details
                     </a>
                 </div>
             </div>
@@ -210,6 +271,43 @@
             } else {
                 header.classList.remove('bg-black/30', 'backdrop-blur-lg');
             }
+        });
+        
+        // Interactive Team Section Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const domainTabs = document.querySelectorAll('.domain-tab');
+            const teamCards = document.querySelectorAll('#team-members-grid .team-card');
+
+            function showMembers(domain) {
+                // Remove active class from all tabs
+                domainTabs.forEach(t => t.classList.remove('active'));
+                // Add active class to the hovered tab
+                const activeTab = document.querySelector(`.domain-tab[data-domain="${domain}"]`);
+                if (activeTab) {
+                    activeTab.classList.add('active');
+                }
+
+                // Show/hide cards based on domain
+                teamCards.forEach(card => {
+                    if (card.dataset.domain === domain) {
+                        card.classList.remove('hidden');
+                        card.classList.add('flex'); // Use flex to ensure proper layout
+                    } else {
+                        card.classList.add('hidden');
+                        card.classList.remove('flex');
+                    }
+                });
+            }
+
+            domainTabs.forEach(tab => {
+                tab.addEventListener('mouseover', () => {
+                    const domain = tab.dataset.domain;
+                    showMembers(domain);
+                });
+            });
+
+            // Set initial state (show Mechanical by default)
+            showMembers('mechanical');
         });
     </script>
 
