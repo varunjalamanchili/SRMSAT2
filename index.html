@@ -115,8 +115,8 @@
         <section class="hero-section">
             <div class="video-background">
                 <iframe 
-                    src="https://www.youtube.com/embed/fO9e9jnhYK8?autoplay=1&mute=1&loop=1&playlist=fO9e9jnhYK8&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
-                    title="Earth from ISS" 
+                    src="https://www.youtube.com/embed/0FBiyFpV__g?autoplay=1&mute=1&loop=1&playlist=0FBiyFpV__g&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+                    title="SRMSAT Background Video" 
                     frameborder="0" 
                     allow="autoplay; encrypted-media">
                 </iframe>
@@ -148,12 +148,12 @@
                         <p class="text-slate-400 mb-6">
                             A testament to its robust design and the team's dedication, SRMSAT-1 has far outlived its planned mission duration. It remains operational in orbit to this day, a continuing source of pride and a powerful foundation for our current project, SRMSAT-2.
                         </p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                        <div class="mt-6 space-y-4">
                             <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
-                               <iframe class="w-full h-full" src="https://www.youtube.com/embed/gbTj7E3S_n4" title="SRMSAT-1 Launch Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                               <iframe class="w-full h-full" src="https://www.youtube.com/embed/gbTj7E3S_n4?autoplay=1&mute=1&loop=1&playlist=gbTj7E3S_n4" title="SRMSAT-1 Launch Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
-                               <iframe class="w-full h-full" src="https://www.youtube.com/embed/ypWr7Ef19DY" title="SRMSAT Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                               <iframe class="w-full h-full" src="https://www.youtube.com/embed/ypWr7Ef19DY?autoplay=1&mute=1&loop=1&playlist=ypWr7Ef19DY" title="SRMSAT Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -217,7 +217,7 @@
 
                     <!-- Corporate & Media Domain Members -->
                     <div class="team-card rounded-lg p-6 flex-col text-center hidden" data-domain="corporate">
-                        <h3 class="text-xl font-bold text-white">Chinmayee</h3>
+                        <h3 class="text-xl font-bold text-white">Chinmayee Bhattacharjee</h3>
                         <p class="text-blue-400 font-semibold text-sm">Research and Media/Corporate</p>
                     </div>
                 </div>
@@ -366,7 +366,7 @@
 
                 let chatHistory = [{ role: "user", parts: [{ text: fullPrompt }] }];
                 const payload = { contents: chatHistory };
-                const apiKey = "AIzaSyDNHX2XXfwivkHUk6FAM1n660DPgeO_MNE"; // API key is handled by the environment
+                const apiKey = ""; // API key is handled by the environment
                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
                 const response = await fetch(apiUrl, {
