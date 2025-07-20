@@ -13,9 +13,32 @@
             background-color: #0a0a0a;
             color: #e2e8f0;
         }
-        .page-header {
-            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('https://placehold.co/1920x1080/0a0a0a/e2e8f0?text=Water+Monitoring+from+Space') no-repeat center center;
-            background-size: cover;
+        .page-header-video {
+            position: relative;
+            height: 70vh; /* A bit taller for more impact */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: -2;
+        }
+        .video-overlay-dark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: -1;
         }
         .section-gradient {
             background: radial-gradient(ellipse at center, rgba(29, 78, 216, 0.05), transparent 70%);
@@ -76,9 +99,14 @@
 
     <main>
         <!-- Page Header -->
-        <section class="page-header py-24">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white">SRMSAT-2: A Mission for National Water Security</h1>
+        <section class="page-header-video">
+            <video class="video-bg" autoplay loop muted playsinline>
+                <source src="water video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay-dark"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg">SRMSAT-2: A Mission for National Water Security</h1>
                 <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300">Leveraging space technology to address one of the world's most critical environmental challenges.</p>
             </div>
         </section>
