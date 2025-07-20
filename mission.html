@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission | Team SRMSAT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .page-header {
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('https://placehold.co/1920x1080/0a0a0a/e2e8f0?text=Water+Monitoring+from+Space') no-repeat center center;
+            background-size: cover;
+        }
+        .section-gradient {
+            background: radial-gradient(ellipse at center, rgba(29, 78, 216, 0.05), transparent 70%);
+        }
+        .faq-item .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 200px; /* Adjust as needed */
+        }
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+        .faq-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="sticky top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg border-b border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">TEAM SRMSAT</a>
+                </div>
+                <nav class="hidden md:flex md:space-x-8">
+                    <a href="about.html" class="text-slate-300 hover:text-white transition-colors duration-300">About</a>
+                    <a href="mission.html" class="text-white font-semibold">Mission</a>
+                    <a href="team.html" class="text-slate-300 hover:text-white transition-colors duration-300">Team</a>
+                    <a href="gallery.html" class="text-slate-300 hover:text-white transition-colors duration-300">Gallery</a>
+                    <a href="cubesat.html" class="text-slate-300 hover:text-white transition-colors duration-300">What is a CubeSat?</a>
+                    <a href="contact.html" class="text-slate-300 hover:text-white transition-colors duration-300">Contact Us</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-lg">
+            <nav class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+                <a href="mission.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-slate-800">Mission</a>
+                <a href="team.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Team</a>
+                <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Gallery</a>
+                <a href="cubesat.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">What is a CubeSat?</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white">SRMSAT-2: A Mission for National Water Security</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-300">Leveraging space technology to address one of the world's most critical environmental challenges.</p>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold text-white">Addressing the Water Crisis from Orbit</h2>
+                    </div>
+                    <p class="mt-6 text-slate-400 text-lg leading-relaxed">
+                        The water crisis, encompassing shortages, pollution, and other critical issues, ranks as a top global risk by impact. Water pollution poses a complex and escalating threat to the economy and public health of many nations. Accurate and rapid monitoring of our water environment is therefore essential for evaluating water quality on both regional and national scales. In response, SRMSAT-2 is proposed as a dedicated water monitoring nanosatellite, designed to provide valuable imaging data to benefit our state and nation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Objectives Section -->
+        <section id="objectives" class="py-20 bg-black/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Mission Objectives</h2>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-900/50 p-6 rounded-lg flex items-start space-x-4">
+                        <i data-lucide="satellite" class="w-8 h-8 text-blue-400 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-white">Develop a 3U Nanosatellite</h3>
+                            <p class="text-slate-400 text-sm">To design, develop, launch, and operate a 3U SRMIST Nanosatellite with a state-of-the-art imaging payload to serve the nation.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-lg flex items-start space-x-4">
+                        <i data-lucide="network" class="w-8 h-8 text-blue-400 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-white">Create a Network of Excellence</h3>
+                            <p class="text-slate-400 text-sm">To foster a leading collaborative platform in space science at SRMIST by connecting university departments, regional industry, and the scientific ecosystem.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-lg flex items-start space-x-4">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 text-blue-400 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-white">Enhance Student Skills</h3>
+                            <p class="text-slate-400 text-sm">To provide students with high-level skills in space engineering, project management, and the space environment, equipping them with future leadership qualities.</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-lg flex items-start space-x-4">
+                        <i data-lucide="star" class="w-8 h-8 text-blue-400 mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-white">Establish Regional Excellence</h3>
+                            <p class="text-slate-400 text-sm">To make SRMIST a regional center of excellence in space science and engineering through the establishment of continuing programs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Section -->
+        <section id="methodology" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Project Methodology</h2>
+                    <p class="mt-2 max-w-3xl mx-auto text-slate-400">A phased approach to satellite development, driven by students and faculty.</p>
+                </div>
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="border border-slate-800 p-6 rounded-lg">
+                        <h3 class="font-bold text-blue-400 text-xl">1. Ground Station Upgradation</h3>
+                        <p class="text-slate-400 mt-2 text-sm">The existing UHF/VHF ground station will be upgraded to ensure robust tracking and data reception capabilities, preparing the team for post-launch operations.</p>
+                    </div>
+                    <div class="border border-slate-800 p-6 rounded-lg">
+                        <h3 class="font-bold text-blue-400 text-xl">2. Nanosatellite Development</h3>
+                        <p class="text-slate-400 mt-2 text-sm">Students and faculty will design and develop the SRMSAT-2 nanosatellite, integrating an advanced commercial or in-house camera for imaging water bodies.</p>
+                    </div>
+                    <div class="border border-slate-800 p-6 rounded-lg">
+                        <h3 class="font-bold text-blue-400 text-xl">3. Launch & Operations</h3>
+                        <p class="text-slate-400 mt-2 text-sm">The team will interface with launch agencies for satellite deployment and subsequently operate the satellite from the upgraded ground station to produce usable image products.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Benefits Section -->
+        <section id="benefits" class="py-20 bg-black/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Additional Project Benefits</h2>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <p class="text-slate-400"><i data-lucide="file-text" class="inline-block w-5 h-5 mr-2 text-blue-500"></i>Understanding the nation's regulatory procedures for launching a satellite.</p>
+                    <p class="text-slate-400"><i data-lucide="building-2" class="inline-block w-5 h-5 mr-2 text-blue-500"></i>Establishing relationships with industry for fabrication and with space agencies like ISRO for testing.</p>
+                    <p class="text-slate-400"><i data-lucide="flask-conical" class="inline-block w-5 h-5 mr-2 text-blue-500"></i>Establishing a dedicated Space Lab on the SRMIST campus for satellite development.</p>
+                    <p class="text-slate-400"><i data-lucide="share-2" class="inline-block w-5 h-5 mr-2 text-blue-500"></i>Creating a common platform for other aerospace and robotics projects to share developments.</p>
+                    <p class="text-slate-400"><i data-lucide="globe" class="inline-block w-5 h-5 mr-2 text-blue-500"></i>Promoting the real-world use of SRMSAT-2 images by establishing relationships with other agencies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 section-gradient">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white">Frequently Asked Questions</h2>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-slate-900/50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-white">
+                            <span>What is the core problem SRMSAT-2 aims to address?</span>
+                            <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-slate-400 text-sm">
+                            <p>The project is a response to the global water crisis, which includes water shortage and pollution. The project is built on the need for accurate and fast water environment monitoring to enable the comprehensive evaluation of water quality on a regional and national scale.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-slate-900/50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-white">
+                            <span>What are the primary specifications of the SRMSAT-2 satellite?</span>
+                            <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-slate-400 text-sm">
+                            <p>The proposal outlines the development of a nanosatellite to image the Earth's water bodies. It is described as both a 3U and a 6U SRM IST Nanosatellite that will be equipped with a state-of-the-art, advanced commercial imaging camera and other commercial components.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-slate-900/50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-white">
+                            <span>Who is leading the development of the SRMSAT-2 mission?</span>
+                            <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-slate-400 text-sm">
+                            <p>The nanosatellite will be designed and developed by the students and faculty of SRMIST. The project aims to provide students with high-level skills and equip them with future leadership qualities.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-slate-900/50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-white">
+                            <span>How will the project directly involve and challenge students?</span>
+                            <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-slate-400 text-sm">
+                            <p>Students will be central to the program. They will operate the upgraded ground station and use it for the satellite's operation post-launch. Furthermore, preliminary mission design challenges in various fields of engineering and technology are presented to students for reward-winning solutions.</p>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 5 -->
+                    <div class="faq-item bg-slate-900/50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-white">
+                            <span>What is the first major phase of this project?</span>
+                            <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-slate-400 text-sm">
+                            <p>The first step is the upgradation of the existing ground station. The current UHF, VHF ground station needs to be upgraded with a good tracking system to be ready to track and receive telemetry and image data from the SRMSAT-2 satellite. This initial phase will also involve tracking existing HAM satellites to train students.</p>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 6 -->
+                    <div class="faq-item bg-slate-900/50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-white">
+                            <span>Will SRMIST collaborate with external agencies on this project?</span>
+                            <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-slate-400 text-sm">
+                            <p>Yes. The program intends to interface with launch agencies to launch the satellite. It also aims to establish inter-relationships with industry for fabrication and with space agencies like ISRO to use their test facilities to test the satellite. The goal is to coordinate with other agencies to use the satellite's images for applications in our state and nation.</p>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 7 -->
+                    <div class="faq-item bg-slate-900/50 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-white">
+                            <span>What is the long-term vision for the space program at SRMIST?</span>
+                            <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
+                        </button>
+                        <div class="faq-answer px-5 pb-5 text-slate-400 text-sm">
+                            <p>The long-term aim is to make SRMIST a regional center of excellence in space science and engineering with continuing programs. The project will also establish a dedicated Space Lab on campus and create a common platform to share designs and developments with other aerospace and robotics projects of common interest.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- University Logo Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <img src="srm_logo.png" alt="SRM Institute of Science and Technology Logo" class="mx-auto h-24">
+                <p class="mt-4 text-slate-500 text-sm">An official student club of SRM Institute of Science and Technology.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-slate-800/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="md:flex md:justify-between md:items-center">
+                <div class="flex justify-center space-x-6 md:order-2">
+                    <a href="https://pr.linkedin.com/company/team-srmsat-space-systems-laboratory" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="linkedin"></i></a>
+                    <a href="https://www.instagram.com/srmsatofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white" target="_blank"><i data-lucide="github"></i></a>
+                </div>
+                <div class="mt-8 md:mt-0 md:order-1">
+                    <p class="text-center text-base text-slate-400">
+                        &copy; 2025 Team SRMSAT. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const wasOpen = item.classList.contains('open');
+                // Close all items
+                faqItems.forEach(i => i.classList.remove('open'));
+                // If it wasn't open, open it
+                if (!wasOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
